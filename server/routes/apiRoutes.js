@@ -8,7 +8,7 @@ router.get("/auth/google", passport.authenticate("google", { scope: ['profile']}
 
 // Routes Google callback after authentication
 router.get("/auth/google/callback", passport.authenticate("google"), (req, res) => {
-    res.send("<p>Authenticated</p>");
+    res.send("<h1>Authenticated</h1>");
 });
 
 // Route to Logout

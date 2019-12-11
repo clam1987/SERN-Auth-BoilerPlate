@@ -19,10 +19,12 @@ User.init({
     timestamps: true
 });
 
-User.sync({ force: true }).then(() => {
-    return User.create({
-    })
-});
+
+// To Sync Server
+// User.sync({ force: true }).then(() => {
+//     return User.create({
+//     })
+// });
 
 
 module.exports = User;

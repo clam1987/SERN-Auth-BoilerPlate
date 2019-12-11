@@ -19,7 +19,7 @@ passport.use(
       User.findOrCreate({
         where: { googleId: profile.id, displayName: profile.displayName }
       }).then((err, user) => {
-        return done(err, user);
+        return done(err, user, profile);
       });
     }
   )
