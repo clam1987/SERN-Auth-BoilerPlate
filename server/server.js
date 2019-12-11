@@ -14,6 +14,9 @@ const app = express();
 // Initalize dotenv
 dotenv.config();
 
+// Database Config
+const db = require("./config/connection");
+
 // Body Parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
