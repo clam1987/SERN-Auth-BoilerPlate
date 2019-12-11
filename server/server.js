@@ -3,7 +3,7 @@ const express = require("express");
 const session = require("express-session");
 const dotenv = require("dotenv");
 const cookieSession = require("cookie-session");
-const passport = require("passport");
+const passport = require("./config/authentication");
 
 // Global Variables
 const PORT = process.env.PORT || 3001;
