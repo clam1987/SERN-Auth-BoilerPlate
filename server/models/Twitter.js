@@ -5,9 +5,9 @@ const sequelize = require("../config/connection");
 const Model = Sequelize.Model;
 
 // User Model
-class User extends Model{}
-User.init({
-    googleId: {
+class Twitter extends Model{}
+Twitter.init({
+    twitterId: {
         type: Sequelize.STRING,
     },
     displayName: {
@@ -15,16 +15,9 @@ User.init({
     },
 },
     {sequelize,
-    modelName: "user",
+    modelName: "twitter",
     timestamps: true
 });
 
+module.exports = Twitter;
 
-// To Sync Server
-// User.sync({ force: true }).then(() => {
-//     return User.create({
-//     })
-// });
-
-
-module.exports = User;
